@@ -1,0 +1,14 @@
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let movie of movies; let i = index" cdkDrag>
+    <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+    {{movie}}
+    <button mat-icon-button (click)="gotClicked(i)">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </div>
+</div>
+
+
+<!-- Copyright 2022 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->
